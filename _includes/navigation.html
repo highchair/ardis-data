@@ -1,0 +1,27 @@
+      <header class="l__head">
+        <div class="l__head__wrapper">
+          <div class="brand">
+            <a href="{{ '/' | relative_url }}" class="brand__logo" title="To Home page">ArtInRuins</a>
+            <p class="brand__tagline">Documenting Change since 2002</p>
+          </div>
+          <nav aria-label="Primary">
+            <ul>
+              <li>
+                <a href="#">Architecture</a>
+                <ul>
+                  <li><a href="#"><span class="u__sr-only">Archives Rhode Island</span><span aria-hidden="true">#ArchivesRI</span></a></li>
+                  <li><a href="#"><span class="u__sr-only">Not In Ruins</span><span aria-hidden="true">#NotInRuins</span></a></li>
+                  <li><a href="#"><span class="u__sr-only">Urban Decay</span><span aria-hidden="true">#UrbanDecay</span></a></li>
+                  <li><a href="{{ '/' | relative_url }}category/usedtobethere/" class="{% if page.permalink == 'category/usedtobethere/' %}active{% endif %}"><span class="u__sr-only">Used To Be There</span><span aria-hidden="true">#UsedToBeThere</span></a></li>
+                  <li><a href="#"><span class="u__sr-only">What Are They Building</span><span aria-hidden="true">#WhatAreTheyBuilding</span></a></li>
+                  <li><a href="{{ '/' | relative_url }}tags/">All Tags</a></li>
+                </ul>
+              </li>
+              <li><a href="{{ '/' | relative_url }}about/">About</a></li>
+              <li><a href="{{ '/' | relative_url }}links/">Similar Projects</a></li>
+              <li><a href="{{ '/' | relative_url }}support/">Support A I R</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>

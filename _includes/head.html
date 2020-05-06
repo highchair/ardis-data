@@ -1,0 +1,27 @@
+{%- assign meta_title = site.title -%}
+{%- assign meta_description = page.meta -%}
+
+{%- if page.title -%}
+  {%- assign meta_title = page.title | append: " | " | append: site.title -%}
+{%- endif -%}
+{%- if page.excerpt -%}
+  {%- assign meta_description = page.excerpt -%}
+{%- endif -%}
+{%- if page.description -%}
+  {%- assign meta_description = page.description -%}
+{%- endif -%}
+
+  <head>
+    <meta charset="utf-8">
+<!--     <link rel="dns-prefetch" href="https://use.typekit.net"> -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:site_name" content="{{ site.title }}">
+  
+    <title>{{ meta_title }}</title>
+    <meta name="description" content="{{ meta_description | truncate: 140 }}">
+    <link rel="stylesheet" type="text/css" href="{{ '/' | relative_url }}assets/css/main.css?{{ "now" | date: "%Y%m%d-%H%M" }}">
+  </head>
