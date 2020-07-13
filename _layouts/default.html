@@ -1,21 +1,23 @@
 <!doctype HTML>
-<html lang="en">
+<html lang="en" class="js">
   
   {% include head.html %}
   
-  <body class="l--{{ page.layout }}{% if page.body-class %} page--{{ page.body-class }}{% endif %} no-js">
+  <body class="l--{{ page.layout }}{% if page.body-class %} page--{{ page.body-class }}{% endif %}" data-spy="scroll" data-target="#main-nav" data-offset="90">
     <div id="page-top" class="l">
-      <a href="#content" class="u__sr-only u__sr-only--focusable skip-link">Skip to Content</a>
+      <a href="#content" class="sr-only sr-only-focusable skip-link">Skip to Content</a>
       
       {% include navigation.html %}
       
-      <div class="l__main">
+      <main class="l__main">
+        <article class="l__article">
+          
+          {{ content }}
         
-        {{ content }}
-
-        {% include footer.html %}
-
-      </div>
+        </article>
+      </main>
+      
+      {% include footer.html %}
     </div>
     
     {% include scripts.html %}

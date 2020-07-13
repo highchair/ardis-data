@@ -1,27 +1,50 @@
 {%- assign meta_title = site.title -%}
 {%- assign meta_description = page.meta -%}
 
-{%- if page.title -%}
-  {%- assign meta_title = page.title | append: " | " | append: site.title -%}
+{%- if page.html-title -%}
+  {%- assign meta_title = page.html-title | append: " | " | append: site.title -%}
 {%- endif -%}
-{%- if page.excerpt -%}
-  {%- assign meta_description = page.excerpt -%}
+{%- if page.permalink == '/' -%}
+  {%- assign meta_title = page.html-title -%}
 {%- endif -%}
-{%- if page.description -%}
-  {%- assign meta_description = page.description -%}
-{%- endif -%}
-
   <head>
     <meta charset="utf-8">
-<!--     <link rel="dns-prefetch" href="https://use.typekit.net"> -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//code.jquery.com">
+    <link rel="dns-prefetch" href="//stackpath.bootstrapcdn.com">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
+    
+    <title>{{ meta_title }}</title>
+    <meta name="description" content="{{ meta_description | truncate: 140 }}">
+    <meta property="og:description" content="{{ meta_description | truncate: 140 }}">
+    <meta name="keywords" content="data science consulting, machine learning, artificial intelligence, computer vision, rdd to dataframe, ocr algorithm steps, ocr nlp, big data business, predictive models, predictive modelling, text analysis, data extraction, data mining, analytics, database, SQL, NoSQL">
+    <link rel="stylesheet" type="text/css" href="{{ '/' | relative_url }}assets/css/main.css?{{ "now" | date: "%Y%m%d-%H%M" }}">
+
+    <meta property="og:title" content="{{ meta_title }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:site_name" content="{{ site.title }}">
-  
-    <title>{{ meta_title }}</title>
-    <meta name="description" content="{{ meta_description | truncate: 140 }}">
-    <link rel="stylesheet" type="text/css" href="{{ '/' | relative_url }}assets/css/main.css?{{ "now" | date: "%Y%m%d-%H%M" }}">
+    <meta property="og:image" content="{% link assets/img/social-card-default.png %}">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{% link assets/favicons/apple-touch-icon.png %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% link assets/favicons/favicon-32x32.png %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% link assets/favicons/favicon-16x16.png %}">
+    <link rel="manifest" href="{% link assets/favicons/site.webmanifest %}">
+    <link rel="mask-icon" href="{% link assets/favicons/safari-pinned-tab.svg %}" color="#0c7b93">
+    <link rel="shortcut icon" href="{% link assets/favicons/favicon.ico %}">
+    <meta name="msapplication-TileColor" content="#0c7b93">
+    <meta name="msapplication-config" content="{% link assets/favicons/browserconfig.xml %}">
+    <meta name="theme-color" content="#77d8d8">
+    {% if jekyll.environment == "production" %}
+    <script async src="//www.googletagmanager.com/gtag/js?id=UA-172437522-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-172437522-1');
+    </script>
+    {% endif %}
   </head>

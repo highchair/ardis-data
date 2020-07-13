@@ -1,8 +1,93 @@
 ---
-layout: page
+layout: default
 html-title: Welcome to Ardis Data
 permalink: /
 body-class: home
+meta: 'Real-time data aggregation delivered with powerful value-added analytics in the healthcare, energy, and insurance industries.'
 ---
 
-<h1 class="sr-only">Welcome to {{ site.title }}</h1>
+<section id="intro" class="s s__vh s__cyan s__mesh container d-flex flex-column justify-content-end u__gutter__p">
+  <div class="s__inner row justify-content-end u__vertical__p">
+    <h1 class="col-12 display-4 text-white u__text__mono">Data In <span class="text-warning">&#10132;</span> Insights Out</h1>
+    <p class="h2 text-dark col-md-8 col-lg-6">Real-time public &amp; private data aggregated, delivered, and powered by value-added analytics</p>
+  </div>
+</section>
+
+<section id="about" class="s s__lg-blue position-relative u__gutter__p u__vertical__pb">
+  <div class="s__inner u__vertical__p v-rhythm">
+    <h2 class="h5 u__text__cyan s__title text-center">About</h2>
+    <p class="h5 text-center u__mw--text">Ardis are experts in the aggregation, management, and real-time delivery of aggregated data for any sector. Tailored API-driven connections are the pipeline for your tools and products. </p>
+    <p class="h5 text-center u__mw--text">Talk to us about customization to a specific industry, data requirement, or delivery mechanism. </p>
+    {% comment %}<p class="text-center"><a href="#" class="btn btn-primary">Learn About our Services</a></p>{% endcomment %}
+  </div>
+  <div class="s__flow" aria-hidden="true">
+    <img src="{{ site.baseurl }}{% link assets/img/flow-between-waves.png %}" alt="" loading="lazy">
+  </div>
+</section>
+
+<section id="sectors" class="s u__gutter__p">
+  <div class="s__inner u__vertical__p">
+    <h2 class="h5 u__text__cyan s__title text-center">Our Sectors</h2>
+    <div class="container u__vertical__pt--sm">
+      <div class="row l__columns align-items-center">
+        <div class="col-md-6 col-lg-4 v-rhythm">
+          <h3 class="h4 u__text__cyan u__text__mono">Healthcare</h3>
+          <p class="">Our current specialty — data collection, transformation, and delivery of publicly available health care data</p>
+          <h3 class="h4 u__text__cyan u__text__mono">Energy</h3>
+          <p class="">A growing sector aimed at publicly available energy supply, transportation, and consumption patterns</p>
+          <h3 class="h4 u__text__cyan u__text__mono">Insurance</h3>
+          <p class="">High-quality public-record field agent and customer data can be aggregated, transported, and delivered</p>
+        </div>
+        <div class="col-md-6 col-lg-8 pull-left">
+          <img src="{{ site.baseurl }}{% link assets/img/data-warehouse-with-analytics.png %}" alt="" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="careers" class="s s__lg-blue position-relative u__vertical__p--half u__gutter__p">
+  <div class="s__inner u__vertical__p v-rhythm">
+    <h2 class="h5 u__text__cyan s__title text-center">Careers</h2>
+    <p class="h5 text-center u__mw--text">Ardis is searching for talent that enjoys working with a small team in a research & development environment. Self-motivated, self-managed, multi-talented individuals should apply.</p>
+    <p class="text-center u__mw--text"><b>Open positions:</b> Project Manager / Data Researcher / Software Engineers / Data Analytic Specialists. <b>Contact our team for more information</b>.</p>
+  </div>
+  <div class="s__flow" aria-hidden="true" style="z-index: 1; mix-blend-mode: darken;">
+    <img src="{{ site.baseurl }}{% link assets/img/flow-between-waves.png %}" alt="" loading="lazy">
+  </div>
+</section>
+
+<section id="contact" class="s s__cyan s__mesh s__mesh--rotate u__gutter__p">
+  <div class="s__inner u__vertical__p u__mw--text">
+    <div class="v-rhythm u__vertical__pb--sm">
+      <h2 class="h5 u__text__cyan s__title text-center">Contact Us</h2>
+      <p class="text-center u__text__mono">Write us about new data partnerships, career opportunities, or general inquiries. </p>
+    </div>
+    <form name="contact" method="POST" data-netlify="true">
+      <div class="form-group">
+        <label class="u__text__mono" for="inputName">Full name (required)</label>
+        <input type="text" class="form-control" id="inputName" placeholder="" required>
+      </div>
+      <div class="form-group">
+        <label class="u__text__mono" for="inputEmail">Email (required)</label>
+        <input type="email" class="form-control" id="inputEmail" placeholder="you@domain.com" required>
+      </div>
+      <div class="form-group">
+        <label class="u__text__mono" for="inputCompany">Company name</label>
+        <input type="email" class="form-control" id="inputCompany" placeholder="" required>
+      </div>
+      <div class="form-group">
+        <label class="u__text__mono" for="inputPhone">Phone</label>
+        <input type="tel" class="form-control" id="inputPhone" placeholder="123-456-7890" required>
+      </div>
+      <div class="form-group">
+        <label class="u__text__mono" for="inputMessage">Your need (required)</label>
+        <textarea class="form-control" id="inputMessage" rows="4" required></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary u__text__mono">Send Message</button>
+      </div>
+    </form>
+    
+  </div>
+</section>
