@@ -1,0 +1,23 @@
+$logo_width: 386px;
+$logo_height: 126px;
+
+.navbar-brand {
+  padding: 0 !important;
+}
+
+.brand {
+  display: block;
+  margin: 0 auto;
+  width: ($logo_width * 0.4);
+  height: ($logo_height * 0.4);
+  
+  &__logo {
+    --c__logo-text: $indigo;
+    --c__logo-shape: $yellow;
+  }
+  
+  @include media-breakpoint-up(sm) {
+    width: ($logo_width * 0.5);
+    height: ($logo_height * 0.5);
+  }
+}

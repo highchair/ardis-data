@@ -1,0 +1,14 @@
+.l {
+  margin: 0 auto;
+  max-width: map-get($container-max-widths, xxl);
+  position: relative;
+  overflow: hidden;
+  
+  &__columns {
+    margin: 0 #{- spacer(1)} #{- spacer(1)};
+    
+    & > div {
+      padding: 0 spacer(1) spacer(2);
+    }
+  }
+}

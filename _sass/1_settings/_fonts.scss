@@ -1,47 +1,24 @@
 // Define a "System" font stack for fallbacks
-@font-face {
-  font-family: 'System Sans';
-  font-style: normal;
-  font-weight: normal;
-  src: local(".SFNSText-Light"),
-       local("Roboto-Light"),
-       local(".HelveticaNeueDeskInterface-Light"),
-       local("Ubuntu Light"),
-       local("Segoe UI Light"),
-       local("DroidSans"),
-       local("Tahoma");
-}
 
-// Adobe fonts
-// @import url("https://use.typekit.net/kxt2agf.css");
+// Google fonts
+@import url('//fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&family=Muli:wght@400;700&display=swap');
 
-// Emigre Base 9
-//$font-custom__sans__family: base-9-sans;
-//$font-custom__sans__weight__normal: 400;
-//$font-custom__sans__weight__bold: 700;
+// Muli
+$ff__sans: 'Muli';
+$fs__sans: $ff__sans, 'Helvetica Neue', HelveticaNeue, Helvetica, sans-serif;
+$fw__sans__normal: 400;
+$fw__sans__bold: 700;
 
-// Adobe Alda. Italic in the reg weight available
-//$font-custom__serif__family: alda;
-//$font-custom__serif__lt-weight: 300;
-//$font-custom__serif__rg-weight: 400;
-//$font-custom__serif__bd-weight: 700;
+// Fira Mono
+$ff__mono: 'Fira Mono';
+$fs__mono: $ff__mono, 'Source Code', Consolas, "Lucida Console", "Liberation Mono", "Nimbus Mono L", monospace;
+$fw__mono__normal: 400;
+$fw__mono__bold: 700;
 
-// Emigre Senator Demi weight
-//$font-custom__retro__family: senator;
-//$font-custom__retro__rg-weight: 500;
+$lh__base: 1.5;
+$lh__tight: 1.25;
+$lh__loose: 1.625;
 
-// Define the family and weights
-//$font-stack__sans: $font-custom__sans__family, 'System Sans', 'Segoe UI', sans-serif;
-//$font-stack__serif: $font-custom__serif__family, serif;
-//$font-stack__mono: monospace;
-//
-//$font-weight__normal: $font-custom__serif__rg-weight;
-//$font-weight__bold: $font-custom__serif__bd-weight;
-
-$line-height__base: 1.5;
-$line-height__tight: 1.25;
-$line-height__loose: 1.625;
-
-$vertical-rhythm: ($line-height__base * 1rem);
+$vertical-rhythm: ($lh__base * 1rem);
 
 $kerning: .03125em;

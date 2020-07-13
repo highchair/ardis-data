@@ -1,0 +1,13 @@
+img,
+video,
+iframe {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;  
+}
+
+// Set some colors within an SVG element with CSS Vars
+.foot #ardis-data {
+  --c__logo-text: $cyan;
+  --c__logo-shape: $teal;
+}

@@ -1,0 +1,29 @@
+.o {
+  &__img {
+    &__circle {
+      display: block;
+      border-radius: 50%;
+      overflow: hidden;
+      position: relative;
+      
+      #sectors & {
+        margin: 0 auto;
+        max-width: em(200);
+      }
+    }
+  }
+  
+  &__bg-img {
+    &__cover {
+      background-size: cover;
+      
+      @include media-breakpoint-down(sm) {
+        padding-bottom: 75%; // acts like a min-height. Assumes this container has no content
+      }
+    }
+    
+    &__pos--center {
+      background-position: center center;
+    }
+  }
+}

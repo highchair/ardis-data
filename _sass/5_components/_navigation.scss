@@ -1,0 +1,66 @@
+.navbar {
+  
+  &::after {
+    content: '';
+    background: linear-gradient(rgba($cyan, 1) 10%, rgba($cyan, 0.9) 100%);
+    opacity: 0;
+    transition: opacity 500ms ease;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .scrolled &::after {
+    opacity: 1;
+  }
+  
+  &-collapse {
+    flex-grow: 0;
+    margin-left: auto;
+  }
+  
+  // Oh I hate the specificity of BS4
+  &-nav .nav-link {
+    padding: 0.625em 1em 0.5em !important;
+  }
+  
+  // Media queries to support mobile
+  @include media-breakpoint-down(sm) {
+    justify-content: center;
+  }
+  
+  &-collapse {
+    @include media-breakpoint-down(sm) {
+      @include hide;
+    }
+  }
+}
+
+.nav {
+  &-link {
+    color: $teal;
+    display: block;
+    font-family: $fs__mono;
+    font-weight: $fw__mono__bold;
+    text-decoration: none;
+    transition: $transition-base;
+    
+    @include hover-focus() {
+      color: $white;
+      text-decoration: none;
+    }
+    
+    &.active {
+      color: $blue;
+      cursor: default;
+      border-bottom: 2px solid $teal;
+      
+      @include hover-focus() {
+        color: $blue;
+      }
+    }
+  }
+}

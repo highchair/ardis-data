@@ -11,6 +11,11 @@
   
   // Text
   &__text {
+    &__mono {
+      font-family: $fs__mono;
+      word-spacing: -0.125em;
+    }
+    
     &__small {
       font-size: calc(var(--fs__sm) * 1rem);
       letter-spacing: ($kerning * 2);
@@ -20,13 +25,28 @@
       letter-spacing: ($kerning * 2);
       text-transform: uppercase;
     }
+    
+    &__cyan {
+      color: $cyan-dark;
+    }
+    
+    &__blue {
+      color: $blue;
+    }
   }
   
   // Max width
-  &__max-width {
+  &__mw {
     &--text {
-      margin: 0 auto;
-      //max-width: $max-width__text;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: $mw__text;
+    }
+    
+    &--page {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: $mw__page;
     }
   }
 }

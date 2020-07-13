@@ -2,6 +2,10 @@
 // Root sizes are set in 3_generic/_root.scss
 
 // Fallbacks for IE11 and crappier browsers. Desktop sizes used.
+.display-4 {
+  font-size: $d4-max * 1rem;
+}
+
 h1,
 .h1 {
   font-size: $h1-max * 1rem;
@@ -46,6 +50,7 @@ textarea {
 }
 // End Fallbacks for older browsers
 
+.display-4,
 h1,
 .h1,
 h2,
@@ -76,6 +81,7 @@ body {
   }
 }
 
+.display-4,
 h1,
 .h1,
 h2,
@@ -88,17 +94,19 @@ h5,
 .h5,
 h6,
 .h6 {
-  line-height: $line-height__tight;
+  line-height: $lh__tight;
 }
 
 body,
 input,
 textarea {
-  line-height: $line-height__base;
+  line-height: $lh__base;
 }
 
 small,
-.small {
+.small,
+label,
+button {
   font-size: calc(var(--fs__sm) * 1rem);
   letter-spacing: ($kerning * 2);
 }

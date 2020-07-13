@@ -1,0 +1,119 @@
+.s {
+  &__vh {
+    min-height: 95vh;
+  }
+  
+  &__mesh {
+    position: relative;
+    overflow: hidden;
+    
+    &::after {
+      background: center center no-repeat url("../img/intro-mesh-bw.jpg") transparent;
+      background-size: cover;
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+    }
+  
+    //&--light {
+    //  &::after {
+    //    opacity: 0.25;
+    //    mix-blend-mode: difference;
+    //  }
+    //}
+    
+    &--rotate {
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  
+  &__wave {
+    background: 50% 150% no-repeat url("../img/flow-between-waves.png") transparent;
+    background-size: contain;
+  }
+  
+  &__cyan {
+    background-color: rgba($cyan, 0.85);
+    
+    h1 {
+      margin-bottom: spacer(3);
+    }
+  }
+  
+  &__cyan &__title {
+    color: $blue;
+  }
+  
+  &__title {
+    font-family: $fs__mono;
+    margin-bottom: 2rem;
+    
+    &::after {
+      color: $gray-600;
+      content: '• • •';
+      display: block;
+      padding-top: 1.5rem;
+      speak: none;
+    }
+  }
+  
+  &__lg-blue {
+    background-color: rgba($cyan, 0.2);
+  }
+  
+  &__blue {
+    background-color: $blue;
+    color: $yellow;
+  }
+  
+  &__yellow {
+    background-color: $yellow;
+  }
+  
+  &__flow {
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    transform: translateY(50%);
+    
+    @include media-breakpoint-down(sm) {
+      left: -50%;
+      right: -50%;
+    }
+  }
+  
+  &__flow-bg {
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+#sectors .pull-left {
+  overflow: visible;
+  position: relative;
+  
+  @include media-breakpoint-up(md) {
+    img {
+      margin-left: -3%;
+      margin-right: -3%;
+      max-width: 106%;
+    }
+  }
+  
+  @include media-breakpoint-up(lg) {
+    img {
+      margin-left: -7%;
+      max-width: 110%;
+    }
+  }
+}

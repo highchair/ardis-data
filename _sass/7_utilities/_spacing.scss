@@ -75,6 +75,16 @@ $spacing__max-vw: $max-vw;
 
 
 // Vertical rhythm
+%fluid-vertical-p-half {
+  @include fluid-units(
+    'padding-top' 'padding-bottom',
+    ($vertical-min/2),
+    ($vertical-max/2),
+    $spacing__min-vw,
+    $spacing__max-vw
+  );
+}
+
 %fluid-vertical-p {
   @include fluid-units(
     'padding-top' 'padding-bottom',
@@ -129,6 +139,10 @@ $spacing__max-vw: $max-vw;
 .u__vertical__p {
   @extend %fluid-vertical-p;
   
+  &--half {
+    @extend %fluid-vertical-p-half;
+  }
+  
   &t {
     @extend %fluid-vertical-pt;
   }
@@ -147,4 +161,35 @@ $spacing__max-vw: $max-vw;
   &b {
     @extend %fluid-vertical-mb;
   }
+}
+
+// Less spacing but still fluid
+.u__vertical__p--sm {
+  @include fluid-units(
+    'padding-top' 'padding-bottom',
+    strip-unit(spacer(2)),
+    strip-unit(spacer(3)),
+    $spacing__min-vw,
+    $spacing__max-vw
+  );
+}
+
+.u__vertical__pt--sm {
+  @include fluid-units(
+    'padding-top',
+    strip-unit(spacer(2)),
+    strip-unit(spacer(3)),
+    $spacing__min-vw,
+    $spacing__max-vw
+  );
+}
+
+.u__vertical__pb--sm {
+  @include fluid-units(
+    'padding-bottom',
+    strip-unit(spacer(2)),
+    strip-unit(spacer(3)),
+    $spacing__min-vw,
+    $spacing__max-vw
+  );
 }

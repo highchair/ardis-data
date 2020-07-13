@@ -70,3 +70,11 @@ h1,
   --fs__min: #{$h1-min};
   --fs__max: #{$h1-max};
 }
+
+$d4-min: (51 / 16);
+$d4-max: (73 / 16);
+
+.display-4 {
+  --fs__min: #{$d4-min};
+  --fs__max: #{$d4-max};
+}
