@@ -19,7 +19,7 @@ description:
 
 baseurl: "" # the subpath of your site, e.g. /blog
 port: 5020
-url: "http://127.0.0.1:5020" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://ardisdata.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 
 # Build settings
