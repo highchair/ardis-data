@@ -1,39 +1,34 @@
 // Any project-specific code — listeners and triggers for plugins
 
-// Will output a random number between 0 and Max.
-// If "7" is the max, 0-6 will be output
-// function getRandomInt(max) {
-//   return Math.floor(Math.random() * Math.floor(max));
-// }
-// console.log(getRandomInt(7));
+// Any project-specific code — listeners and triggers for plugins
+jQuery(document).ready(function() {
 
-// If JS is loaded, change the body class
-document.addEventListener("DOMContentLoaded", function() {
-  document.body.classList.remove("no-js");
-  document.body.classList.add("js");
+  // Are JS and JQuery ready?
+  $('html').removeClass('no-js').addClass('js');
+
+  // Animate some scrolling for smoother transitions 
+  $(function() {
+    $('.js-smoothscroll').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 500);
+        }
+      }
+    });
+  });
+
+  $('body').scrollspy({ target: '#main-nav' });
+
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 80) {
+      $('body').addClass('scrolled');
+    } else {
+      $('body').removeClass('scrolled');
+    }
+  });
 });
- 
-// // Randomize
-// document.getElementById('randomize').addEventListener("DOMContentLoaded", function() {
-//   var listitems = document.getElementById('randomize li');
-//   Array.prototype.forEach.call(listitems, function(el, index, array){
-//     if (el.classList.contains('show')) {
-//       el.classList.remove('show');
-//       el.classList.add('hide');
-//     }
-//   });
-// });
 
-//function shuffle(array) {
-//  var m = array.length, t, i;
-//  // While there remain elements to shuffle…
-//  while (m) {
-//    // Pick a remaining element…
-//    i = Math.floor(Math.random() * m--);
-//    // And swap it with the current element.
-//    t = array[m];
-//    array[m] = array[i];
-//    array[i] = t;
-//  }
-//  return array;
-//};
