@@ -1,5 +1,7 @@
 .s {
   &__vh {
+    height: 1px; // IE 11 flex justify-content: flex-end hack
+    // https://medium.com/codeart-mk/internet-explorer-hacks-796200e5741c
     min-height: 95vh;
   }
   
