@@ -21,7 +21,7 @@ meta: 'Real-time data aggregation delivered with powerful value-added analytics 
     {% comment %}<p class="text-center"><a href="#" class="btn btn-primary">Learn About our Services</a></p>{% endcomment %}
   </div>
   <div class="s__flow" aria-hidden="true">
-    <img src="{{ site.baseurl }}{% link assets/img/flow-between-waves.png %}" alt="" loading="lazy">
+    <img src="{% link assets/img/flow-between-waves.png %}" alt="" loading="lazy">
   </div>
 </section>
 
@@ -39,7 +39,7 @@ meta: 'Real-time data aggregation delivered with powerful value-added analytics 
           <p class="">High-quality public-record field agent and customer data can be aggregated, transported, and delivered</p>
         </div>
         <div class="col-md-6 col-lg-8 pull-left">
-          <img src="{{ site.baseurl }}{% link assets/img/data-warehouse-with-analytics.png %}" alt="" loading="lazy">
+          <img src="{% link assets/img/data-warehouse-with-analytics.png %}" alt="" loading="lazy">
         </div>
       </div>
     </div>
@@ -50,10 +50,16 @@ meta: 'Real-time data aggregation delivered with powerful value-added analytics 
   <div class="s__inner u__vertical__p v-rhythm">
     <h2 class="h5 u__text__cyan s__title text-center">Careers</h2>
     <p class="h5 text-center u__mw--text">Ardis is searching for talent that enjoys working with a small team in a research & development environment. Self-motivated, self-managed, multi-talented individuals should apply.</p>
-    <p class="text-center u__mw--text"><b>Open positions:</b> Project Manager / Data Researcher / Software Engineers / Data Analytic Specialists. <b>Contact our team for more information</b>.</p>
+
+    <h3 class="text-center u__mw--text u__vertical__pt--sm">Open positions:</h3>
+    <ul class="u__mw--text">
+      <li><a href="{% link sr-software-data-engineer.html %}">Sr. Software and Data Engineer</a></li>
+      <li><a href="{% link sr-software-systems-engineer.html %}">Sr. Software and Systems Design Engineer</a></li>
+    </ul>
+
   </div>
   <div class="s__flow" aria-hidden="true" style="z-index: 1; mix-blend-mode: darken;">
-    <img src="{{ site.baseurl }}{% link assets/img/flow-between-waves.png %}" alt="" loading="lazy">
+    <img src="{% link assets/img/flow-between-waves.png %}" alt="" loading="lazy">
   </div>
 </section>
 
@@ -88,6 +94,6 @@ meta: 'Real-time data aggregation delivered with powerful value-added analytics 
         <button type="submit" class="btn btn-primary u__text__mono">Send Message</button>
       </div>
     </form>
-    
+
   </div>
 </section>
