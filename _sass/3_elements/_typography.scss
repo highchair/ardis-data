@@ -69,13 +69,13 @@ body {
   // Body is a catch all for other block level elements
   font-size: calc(var(--fs__min) * 1rem);
   //font-weight: $font-custom__serif__rg-weight;
-  
+
   @media (min-width: #{$min-vw * 1em}) {
     font-size: calc(
       (var(--fs__min) * 1rem) + (var(--fs__max) - var(--fs__min)) * ((100vw - #{$min-vw * 1rem}) / #{$max-vw - $min-vw})
     );
   }
-  
+
   @media (min-width: #{$max-vw * 1em}) {
     font-size: calc(var(--fs__max) * 1rem);
   }
@@ -114,6 +114,10 @@ button {
 // Vertical rhythm
 .v-rhythm * + * {
   margin-top: $vertical-rhythm;
+}
+
+.v-rhythm li + li {
+  margin-top: ($vertical-rhythm / 2);
 }
 
 // Nested lists should not have margin bottom

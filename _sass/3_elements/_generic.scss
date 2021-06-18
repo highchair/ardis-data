@@ -1,9 +1,18 @@
+section a:not(.btn) {
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
 img,
 video,
 iframe {
   display: inline-block;
   height: auto;
-  max-width: 100%;  
+  max-width: 100%;
 }
 
 // Set some colors within an SVG element with CSS Vars
